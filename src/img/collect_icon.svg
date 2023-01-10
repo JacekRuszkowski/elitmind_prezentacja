@@ -1,0 +1,25 @@
+<svg id="collect_icon" xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="0 0 116 116">
+  <g id="Ellipse_8" data-name="Ellipse 8" fill="none" stroke="#fff" stroke-width="3">
+    <circle cx="58" cy="58" r="58" stroke="none"/>
+    <circle cx="58" cy="58" r="56.5" fill="none"/>
+  </g>
+  <g id="Group_407" data-name="Group 407" transform="translate(-1059.358 -521.639)">
+    <g id="Group_94" data-name="Group 94" transform="translate(1094.505 547.131)">
+      <g id="Group_90" data-name="Group 90" transform="translate(33.632 18.553)">
+        <path id="Path_96" data-name="Path 96" d="M1122.195,589.618h-9.681a1.194,1.194,0,0,1-1.2-1.194V559.2a1.194,1.194,0,0,1,1.2-1.194h9.681a1.2,1.2,0,0,1,1.2,1.194v29.225A1.2,1.2,0,0,1,1122.195,589.618Zm-8.487-2.389H1121V560.394h-7.292Z" transform="translate(-1111.318 -558.005)" fill="#ffde14"/>
+      </g>
+      <g id="Group_91" data-name="Group 91" transform="translate(16.816 31.513)">
+        <path id="Path_97" data-name="Path 97" d="M1112.341,584.254h-9.684a1.193,1.193,0,0,1-1.194-1.194V566.8a1.2,1.2,0,0,1,1.194-1.194h9.684a1.193,1.193,0,0,1,1.193,1.194V583.06A1.192,1.192,0,0,1,1112.341,584.254Zm-8.49-2.389h7.3V567.991h-7.3Z" transform="translate(-1101.462 -565.601)" fill="#ffde14"/>
+      </g>
+      <g id="Group_92" data-name="Group 92" transform="translate(0.005 16.419)">
+        <path id="Path_98" data-name="Path 98" d="M1092.8,559.12a1.153,1.153,0,0,1-.846-.346,1.177,1.177,0,0,1-.348-.848,1.149,1.149,0,0,1,.348-.836,1.221,1.221,0,0,1,1.682,0,1.165,1.165,0,0,1,.359.836,1.193,1.193,0,0,1-.359.848A1.157,1.157,0,0,1,1092.8,559.12Z" transform="translate(-1091.609 -556.754)" fill="#ffde14"/>
+      </g>
+      <g id="Group_93" data-name="Group 93">
+        <path id="Path_99" data-name="Path 99" d="M1102.483,597.3H1092.8a1.194,1.194,0,0,1-1.2-1.194V569.292a1.194,1.194,0,1,1,2.389,0v25.616h7.294V549.521h-7.294v10.636a1.194,1.194,0,1,1-2.389,0V548.327a1.2,1.2,0,0,1,1.2-1.2h9.681a1.2,1.2,0,0,1,1.2,1.2V596.1A1.2,1.2,0,0,1,1102.483,597.3Z" transform="translate(-1091.606 -547.131)" fill="#ffde14"/>
+      </g>
+    </g>
+    <g id="Group_95" data-name="Group 95" transform="translate(1087.5 601.598)">
+      <path id="Path_100" data-name="Path 100" d="M1146.021,581.444h-57.327a1.194,1.194,0,0,1,0-2.389h57.327a1.194,1.194,0,0,1,0,2.389Z" transform="translate(-1087.5 -579.055)" fill="#ffde14"/>
+    </g>
+  </g>
+</svg>

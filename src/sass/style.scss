@@ -1,0 +1,618 @@
+@use "utilities/colors" as *;
+@use "utilities/mixins" as *;
+@use "utilities/animations" as *;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+@font-face {
+	font-family: "regular_light";
+	src: url("/fonts/regular_-_light-webfont.woff2") format("woff2"),
+		url("/fonts/regular_-_light-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "regular";
+	src: url("/fonts/regular_-_regular-webfont.woff2") format("woff2"),
+		url("/fonts/regular_-_regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "regular_bold";
+	src: url("/fonts/regular_-_bold-webfont.woff2") format("woff2"),
+		url("/fonts/regular_-_bold-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	position: relative;
+	height: 100vh;
+	font-family: "regular";
+	font-size: 3rem;
+	color: white;
+	overflow: hidden;
+}
+
+.flex {
+	display: flex;
+}
+
+.background-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(163, 74, 74, 0.281);
+	z-index: -10;
+}
+
+.background-image {
+	width: 100%;
+	height: 100%;
+	background: url("/dist/img/tlo_BIG.jpg") no-repeat center center fixed;
+	background-size: 120%;
+	transition: background-position ease-in .5s;
+}
+
+.background-image-position {
+	background-position: 25% 75%;;
+}
+
+.main {
+	height: 100%;
+	padding: 5vh 8vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.logo-sustainability-start {
+	position: absolute;
+	@include centerAbsoluteElement;
+	transform: sclae(0.1);
+	opacity: 0;
+	// visibility: hidden;
+
+	img {
+		height: 25vh;
+		transition: height 0.5s ease-in;
+	}
+}
+
+// .logo-sustainability-start-animated {
+// 	top: 10vh;
+// 	left: 22vh;
+// 	transition: top 0.5s ease-in, left 0.5s ease-in;
+
+// 	img {
+// 		height: 7vh;
+// 	}
+// }
+
+.top,
+.bottom {
+	height: 10%;
+	width: 100%;
+}
+
+.top {
+	justify-content: space-between;
+	align-items: center;
+
+	.logo-sustainability {
+		height: 7vh;
+		// opacity: 0;
+		transition: opacity .3s ease-in;
+		cursor: pointer;
+	}
+
+	.logo-elitmind {
+		width: 8vw;
+	}
+}
+
+//////////////////////////// SLAJDY /////////////////////
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 2vh;
+}
+
+.slide {
+	padding: 10vh 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	// background-color: rgba(134, 77, 209, 0.356);
+}
+
+span {
+	font-family: "regular_bold";
+	color: $yellow;
+}
+
+.dashed-line-container {
+	overflow: hidden;
+}
+
+.dashed-line {
+	height: 100%;
+}
+
+.first-slide-left,
+.second-slide-left,
+.fourth-slide-left {
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	// background-color: rgba(0, 255, 255, 0.288);
+}
+
+//////////////// PIERWSZY SLAJD ////////////////
+
+.first-slide {
+
+	justify-content: space-between;
+}
+
+.first-slide-left {
+	width: 40%;
+}
+
+.first-slide-title-start-position,
+.second-slide-title-start-position,
+.fourth-slide-title-start-position {
+	position: absolute;
+	width: 100vw;
+	@include centerAbsoluteElement;
+	font-family: "regular_bold";
+	font-size: 7vh;
+	opacity: 1;
+
+	p {
+		text-align: center;
+	}
+}
+
+.first-slide-title {
+	text-align: center;
+	font-size: 4vh;
+}
+
+.slide-tagline {
+	font-family: "regular_light";
+	font-size: 3vh;
+}
+
+.first-slide-text {
+	text-align: center;
+	font-size: 2.5vh;
+
+	.first-slide-text-top {
+		margin-bottom: 2vh;
+		text-align-last: left;
+	}
+
+	.first-slide-text-bottom {
+		text-align: right;
+		font-size: 5vh;
+		font-family: "regular_bold";
+	}
+}
+
+////////////////////////////////////////////////////
+///  Tuta moesz zorbi jedna klase - "slide right", to samo moe by z "slide-left"
+/// i odwolywac sie do glownego diva first-slide etc
+.first-slide-right,
+.second-slide-right,
+.fourth-slide-right {
+	width: 60%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.box {
+		width: 45%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		// background-color: rgba(255, 0, 200, 0.205);
+
+		.box-icon {
+			width: 10vh;
+			height: 10vh;
+			margin-left: 5vw;
+			margin-right: 1vw;
+		}
+	}
+}
+
+/////////////////// DRUGI SLAJD /////////////////
+
+.second-slide-left {
+	height: 100%;
+	width: 59%;
+	// background-color: rgba(66, 29, 29, 0.801);
+}
+
+.second-slide-title {
+	font-size: 4vh;
+}
+
+.infographic {
+	justify-self: flex-end;
+	margin-top: auto;
+
+	img {
+		width: 45vw;
+	}
+}
+
+.second-slide-right {
+	width: 40%;
+	padding-right: 10vh;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	// background-color: rgba(0, 132, 255, 0.425);
+
+	.box {
+		width: 100%;
+		height: 30%;
+
+		img {
+			margin-left: 3vw;
+		}
+	}
+}
+
+////////////// TRZECI SLAJD /////////////
+.third-slide {
+	padding: 5vh 5vh;
+}
+
+/////////////////// CZWARTY SLAJD /////////////////
+
+.fourth-slide-title-start-position {
+	width: 40vw;
+	text-align: center;
+}
+
+.fourth-slide-left {
+	padding: 5vh 0;
+	width: 46%;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.microsoft-partner {
+	align-items: center;
+
+	img {
+		height: 12vh;
+	}
+}
+
+.microsoft-badges {
+	align-items: center;
+	justify-content: space-between;
+
+	img {
+		height: 12vh;
+		margin: 2vh 3vh;
+	}
+}
+
+.fourth-slide-right {
+	width: 50%;
+	align-items: center;
+	position: relative;
+
+	.box {
+		width: 100%;
+		margin-top: auto;
+		justify-content: center;
+
+		img {
+			height: 32vh;
+			width: auto;
+		}
+
+		.box-text-contact {
+			margin-left: 2vw;
+			h2 {
+				font-family: "regular_bold";
+				font-size: 4vh;
+			}
+
+			span {
+				display: block;
+				margin-top: 2vh;
+				color: white;
+			}
+		}
+	}
+}
+
+.fourth-slide-title {
+	text-align: center;
+	margin: 0 auto;
+	font-family: "regular_bold";
+	font-size: 5vh;
+	line-height: 4vh;
+
+	span {
+		line-height: 0%;
+		font-size: 4vh;
+	}
+}
+
+.visible {
+	visibility: visible;
+}
+
+////////////////////// KONIEC SLAJDÓW ///////////////////
+
+.bottom {
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu {
+	height: 100%;
+	width: 70%;
+	align-items: center;
+	justify-content: space-between;
+	transition: width 0.5s ease-in;
+}
+
+.menu-streched {
+	width: 100%;
+}
+
+.microsoft-logo {
+	position: absolute;
+	right: 0;
+	height: 10vh;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease-in;
+}
+
+.opacity {
+	opacity: 1;
+}
+
+.menu-item {
+	position: relative;
+	width: 6vh;
+	height: 6vh;
+	border-radius: 50%;
+	background-color: $yellow;
+	cursor: pointer;
+}
+
+.menu-item::before {
+	position: absolute;
+	content: "";
+	@include centerAbsoluteElement;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	border: 3px solid $yellow;
+	transition: transform 0.2s ease-in;
+}
+
+.menu-item:hover::before {
+	// border: 3px solid rgb(141, 11, 11);
+	transform: translate(-50%, -50%) scale(1.5);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////// klasy z animacjami /////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+.bounce-delay-1 {
+	animation: bounce 0.3s ease-in-out 2s both;
+}
+
+.bounce-delay-2 {
+	animation: bounce 0.3s ease-in-out 2.1s both;
+}
+
+.bounce-delay-3 {
+	animation: bounce 0.3s ease-in-out 2.2s both;
+}
+
+.bounce-delay-4 {
+	animation: bounce 0.3s ease-in-out 2.3s both;
+}
+
+.bounce-delay-5 {
+	animation: bounce 0.3s ease-in-out 2.4s both;
+}
+
+.bounce-delay-6 {
+	animation: bounce 0.3s ease-in-out 2.5s both;
+}
+
+.bounce-delay-7 {
+	animation: bounce 0.3s ease-in-out 2.6s both;
+}
+
+.bounce-delay-8 {
+	animation: bounce 0.3s ease-in-out 2.7s both;
+}
+
+.bounce-delay-9 {
+	animation: bounce 0.3s ease-in-out 2.8s both;
+}
+
+.contact-image-bounce {
+	animation: bounce .6s ease-in-out 2s both;
+}
+
+//// opacity ////
+
+.opacity-delay-1 {
+	animation: opacity 0.5s ease-in 1.4s both;
+}
+
+.opacity-delay-2 {
+	animation: opacity 0.5s ease-in 2.6s both;
+}
+
+.opacity-delay-3 {
+	animation: opacity 0.5s ease-in 3s both;
+}
+
+//// naglowek pierwszego slajdu
+.first-slide-title-end-position {
+	animation: firstTitle 0.6s ease-in 1s both;
+}
+
+.second-slide-title-end-position {
+	animation: secondTitle 0.7s ease-in 1s both;
+}
+.fourth-slide-title-end-position {
+	animation: fourthTitle 0.6s ease-in 1s both;
+}
+
+.slide-left {
+	animation: slideLeft 0.4s ease-in 1.6s both;
+}
+
+.slide-left-2 {
+	animation: slideLeft 0.4s ease-in 3.5s both;
+}
+
+.line-slide {
+	animation: lineSlide 0.4s ease-in 2s both;
+}
+
+.line-slide-2 {
+	animation: lineSlide 0.4s ease-in 3s both;
+}
+
+.start-logo-grow {
+	animation: startSlideLogo 1s ease-in both;
+}
+
+///////////////////////////////////////////////////
+////////////////// ANIMACJE //////////////////////
+///////////////////////////////////////////////// 
+@keyframes startSlideLogo {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+}
+@keyframes firstTitle {
+	0% {
+		font-size: 7vh;
+		opacity: 1;
+	}
+
+	100% {
+		top: 12vh;
+		left: 34vh;
+		font-size: 4vh;
+		opacity: 0;
+	}
+}
+
+@keyframes secondTitle {
+	0% {
+		font-size: 7vh;
+		opacity: 1;
+	}
+
+	100% {
+		top: 16vh;
+		left: 45vh;
+		font-size: 4vh;
+		opacity: 0;
+	}
+}
+
+@keyframes fourthTitle {
+	0% {
+		font-size: 9vh;
+		opacity: 1;
+	}
+
+	100% {
+		top: 15vh;
+		left: 59vw;
+		font-size: 5vh;
+		opacity: 0;
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateX(-150%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes lineSlide {
+	from {
+		transform: translateY(150%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
