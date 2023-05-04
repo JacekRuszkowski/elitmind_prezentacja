@@ -71,6 +71,33 @@ body {
 	background-position: 25% 75%;;
 }
 
+////////////////////////////////////////
+/////// PORTRAIT VIEW  SETTINGS ////////
+////////////////////////////////////////
+.portrait-view-info {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h2 {
+	font-size: 10vw;
+	  text-align: center;
+	}
+
+	img {
+		margin-top: 12%;
+		width: 11%;
+		animation: flipDevice 2.5s ease-in-out;
+		animation-iteration-count: infinite;
+	}
+  }
+
+
+//////////////////////////////////////////
+///////////////// MAIN ///////////////////
+/////////////////////////////////////////
 .main {
 	height: 100%;
 	padding: 5vh 8vh;
@@ -366,7 +393,8 @@ span {
 	visibility: visible;
 }
 
-////////////////////// KONIEC SLAJDÓW ///////////////////
+
+////////////////////// KONIEC SLAJDÓW ////////////////////////
 
 .bottom {
 	position: relative;
@@ -415,7 +443,7 @@ span {
 	width: 80%;
 	height: 80%;
 	border-radius: 50%;
-	border: 3px solid $yellow;
+	border: 2px solid $yellow;
 	transition: transform 0.2s ease-in;
 }
 
@@ -516,7 +544,26 @@ span {
 
 ///////////////////////////////////////////////////
 ////////////////// ANIMACJE //////////////////////
-///////////////////////////////////////////////// 
+/////////////////////////////////////////////////
+@keyframes flipDevice {
+	0% {
+		opacity: 0;
+		transform: rotate(0deg);
+	}
+	25% {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+	75% {
+		opacity: 1;
+		transform: rotate(90deg);
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(90deg);
+	}
+}
+
 @keyframes startSlideLogo {
 	0% {
 		transform: translate(-50%, -50%) scale(0);
@@ -616,3 +663,29 @@ span {
 	}
 }
 
+
+//////////////////////////////
+//////// MEDIA-QUERIES ///////
+//////////////////////////////
+@media (orientation: portrait) {
+	.main {
+	  display: none;
+	}
+  
+	.background-image {
+	  background-size: 700%;
+	}
+
+	.portrait-view-info {
+		display: flex;
+	}
+  
+
+  }
+  
+//   @media (orientation: horizontal) {
+// 	.portrait-view-info {
+// 	 background-color: #fff;
+// 	}
+//   }
+  
