@@ -9,6 +9,20 @@ const bg = document.querySelector('.background-image');
 const menuLogo1 = document.querySelector('.logo-sustainability');
 const menuLogo2 = document.querySelector('.logo-elitmind');
 
+// const page = document.querySelector('.body');
+
+//////////////// FULL SCREEN MODE /////////////////////
+// make the element go to full-screen mode
+// page.requestFullscreen()
+// 	.then(function() {
+// 		// element has entered fullscreen mode successfully
+// 	})
+// 	.catch(function(error) {
+//         console.log('error');
+// 		// element could not enter fullscreen mode
+// 	});
+
+
 /// zmienna do sterowania wyłączeniem automatycznego przechodzenia slajdów
 let click = 0;
 
